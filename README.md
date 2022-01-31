@@ -1,13 +1,10 @@
 # ARTWA - Awesome Rock Star Teacher Web App
 
-#Description
-
-
-#Features
+**#FEATURES**
 - Class Schedule Viewer
 - Salary Calculator
 - Calendar & Reminders
-- 
+
 
 
                                                                     
