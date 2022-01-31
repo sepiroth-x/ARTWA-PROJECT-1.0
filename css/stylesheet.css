@@ -1,1 +1,77 @@
+* {
+ padding: 0;
 
+
+}
+
+
+.header_intro{
+
+   text-align: center;
+
+}
+.banner{
+  border: 1px solid black;
+}
+.date-time {
+
+  text-align: center;
+  margin-bottom:10px;
+
+}
+.menu-nav{
+
+  display:flex;
+  text-align: center;
+  background-color: rgb(168,168,168);
+  padding: 0px;
+
+
+}
+.menu-nav a{
+
+ display: inline-flex;
+ text-decoration: none;
+ list-style: none;
+ width: auto;
+ padding: 10px;
+ margin:0 5px;
+ color: Black;
+ float:left;
+
+
+
+}
+.menu-nav a:hover {
+  background-color: rgb(129,129,129);
+  color:white;
+}
+
+.dragon-logo{
+
+   display:block;
+
+
+}
+
+.login {
+ display: block;
+ margin-left: 50px;
+ background-color: rgb(168,168,168);
+ padding: 50px 250px 50px 50px;
+
+
+}
+
+.user-control-panel {
+  display: flex;
+}
+
+.user-control-panel form {
+  display: inline-flex;
+  padding: 5px;
+}
+
+.user-control-panel #search-box input{
+  padding: 0px 5px;
+}
