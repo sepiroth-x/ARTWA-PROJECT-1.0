@@ -13,6 +13,8 @@
 # STATUS:
 - Still Under Planning & Development
 
+# LICENSE: 
+- OPEN SOURCE
 
 # FEATURES: 
 - Time in & Time out
@@ -28,6 +30,15 @@ I've been working as a Teacher for 3 years in both Senior High School and Colleg
 
 # SUPPORT
 I'm still looking for fellow developers out there who are willing to contribute their skills for the success of the project. If you're a Teacher as well and is also looking to build an app that can help you lighten the responsibilities of your career as an Educator, please feel free to support this project by joining our project's discussion and project development.
+
+# I need people who are:
+- Visually Creative
+- Highly Motivated
+- Goal-Oriented Individuals
+
+# I need people who have any of these:
+- Proficient in HTML / CSS / Bootstrap / Javascript / Jquery
+- Proficient in PHP / SQL
 
 # CONTACT ME
 You can contact me fast via:
