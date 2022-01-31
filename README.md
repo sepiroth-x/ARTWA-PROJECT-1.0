@@ -34,6 +34,7 @@ I'm still looking for fellow developers out there who are willing to contribute 
 # I need people who are:
 - Visually Creative
 - Highly Motivated
+- People good with UI/UX Design
 - Goal-Oriented Individuals
 
 # I need people who have any of these:
