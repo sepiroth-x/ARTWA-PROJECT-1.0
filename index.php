@@ -1,92 +1,53 @@
 
+ 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>ARTWA PROJECT</title>
-
- <!--metas-->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="author" content="https://ifamsocial.com/u/sepirothx">
- <meta name="description" content="My Projects">
-
-
- <!--links-->
-<link href="css\stylesheet.css" type="text/css" rel="stylesheet">
-
+  <title>PHP Training Index Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href ="css/stylesheet.css" type="text/css" rel="stylesheet">
 </head>
+
 <header>
+  <section class ="menu-nav">
+  <ul>
+  <a href="index.php"><li>Home</li></a>
+  <a href="projects.php"><li>Projects</li></a>
+  <a href="#" target="_blank"><li>Training</li></a>
+  <a href="#"target="_blank"><li>About Us</li></a>
 
-  <div class="header_intro">
-   <h1>ARTWA PROJECT</h1>
-  <h3>By: Sepiroth-X</h3>
- </div>
-  <div class="date-time">
-    <?php
-      $current = getdate();
-
-      $current_time = $current['hours'] . ':' . $current['minutes'];
-
-      $current_date = $current['mon'] . '-' . $current['mday'] . '-' .
-      $current['year'];
-
-      echo "Date & Time: $current_date ||  $current_time";
-    ?>
-  </div>
-
-  <div class="menu-nav">
-      <ul>
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Projects</li></a>
-        <a href="#"><li>Contact</li></a>
-      </ul>
-
+  </ul>
+  </section>
 
 </header>
 
 <body>
-
-<div class="banner">
-  <table>
-  <tr>
-
-    <td>
- <img src="img\blackdragon.jpg" class="dragon-logo" alt="blackdragon-logo" />
-    </td>
-    <td>
+<section class="header">
+ <div class="banner">
+   <img src="" alt=""/>
+ </div>
 
 
-        <div class="login">
-           <form method="post" action="login.php"> <h1>LOGIN</h1><br><br>
-             <input name="username" type="text" value="username" size="30"><br><br>
-             <input name="password" type="password" value="password" size="30"><br><br>
-             <input name="submit" type="submit" value="login"><br><br>
-             <a href = "signup.php"><p>SIGN UP</p><a/>
-           </form>
-         </div>
+</section>
+
+  <section class = "login-form">
+    <form action="login.php" method="POST"> <h1>Welcome to TCC IT DEPARTMENT!</h1> <br>
+      <input name = "username" type="text" value="username"><br><br>
+      <input name = "password" type="password" value="password"><br><br>
+      <input name = "login-button" type="submit" value="login"> <a href ="signup.php">SIGN UP</a>
+    </form>
 
 
-
-    </td>
-
-
-
-  </tr>
-
-
-
-
-
-
-</table>
-
-</div>
-
-
-
+</section>
 
 </body>
 
+<footer class="footer">
+ <div><a href="#">Copyright@ 2022 Developed by HANGMATA 2022</a>.
+ </div>
+
+</footer>
 
 </html>

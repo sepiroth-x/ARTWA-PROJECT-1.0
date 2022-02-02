@@ -1,122 +1,111 @@
 <?php
 session_start();
-include("connection.php");
+
+include("connections.php");
 include("functions.php");
 
-  if($_SERVER['REQUEST_METHOD'] == "POST")
-  {
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
     //something was posted
-   $username = $_POST['username'];
-   $password = $_POST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $firstname = $_POST['first_name'];
+    $middlename = $_POST['middle_name'];
+    $lastname = $_POST['last_name'];
+    $email = $_POST['email'];
+    $contactnumber = $_POST['contact_number'];
+    $birthday = $_POST['birthday'];
+    
+    
+    
+    
 
-   if(!empty($username) && !empty($password) && !is_numeric($username))
-   {
+    
 
-     //save to database
+    if(!empty($username) && !empty($password) && !is_numeric($username))
+    {
 
-     $user_id = random_num(999999);
-     $query = "insert into users (user_id, username, password) values
-     ('$user_id','$username','$password')";
+        //save to database
+        $user_id = random_num(99999);
+        $query = "insert into users (user_id,username,password) values ('$user_id','$username','$password')";
+        $query2 = "insert into user_account_info (username, first_name, middle_name, last_name, email, contact_number, birthday) 
+        values ('$username', $firstname', '$middlename', '$lastname', '$email', '$contactnumber', '$birthday')";
 
-     mysqli_query($con, $query);
-     header("Location: index.php");
-     die;
-
-
-   } else
-      {
+         mysqli_query($con, $query);
+      
+        
+        
+        header("Location: index.php");
+        die;
+    }else
+    {
         echo "Please enter some valid information!";
-      }
+    }
+}
 
 
-  }
-
-
-
-
-
- ?>
+?>
 
 
 
-
-
-
-
-
+ 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>SIGN UP</title>
-
- <!--metas-->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="author" content="https://ifamsocial.com/u/sepirothx">
- <meta name="description" content="My Projects">
-
-
- <!--links-->
-<link href="css\stylesheet.css" type="text/css" rel="stylesheet">
-
+  <title>PHP Training Index Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href ="css/stylesheet.css" type="text/css" rel="stylesheet">
 </head>
 
+<header>
+  <section class ="menu-nav">
+  <ul>
+  <a href="index.php"><li>Home</li></a>
+  <a href="#"><li>Projects</li></a>
+  <a href="#" target="_blank"><li>Training</li></a>
+  <a href="#"target="_blank"><li>About Us</li></a>
+
+  </ul>
+  </section>
+
+</header>
+
 <body>
-  <div class="header_intro">
-   <h1>Welcome To My PHP Playground</h1>
-  <h3>By: Richard Cebel Cupal</h3>
-
-  <div class="date-time">
-    <?php
-      $current = getdate();
-
-      $current_time = $current['hours'] . ':' . $current['minutes'];
-
-      $current_date = $current['mon'] . '-' . $current['mday'] . '-' .
-      $current['year'];
-
-      echo "Date & Time: $current_date ||  $current_time";
-    ?>
-  </div>
-<div class="banner">
-  <table>
-  <tr>
-    <td>
- <img src="img\blackdragon.jpg" class="dragon-logo" alt="blackdragon-logo" />
-    </td>
-    <td>
+<section class="header">
+ <div class="banner">
+   <img src="" alt=""/>
+ 
 
 
-        <div class="signup">
-           <form method="post"> <h1>SIGN UP</h1><br><br>
-             <input name="username" type="text" value="username" size="30">
-             <input name="password" type="password" size="30">
-             <input name="submit" type="submit" value="signup"><br><br>
-             <a href="index.php">LOGIN<a>
-           </form>
-         </div>
+</section>
 
-
-
-    </td>
-
-
-
-  </tr>
-
-
-
-
-
- </div>
+  <section class = "signup-form">
+    <form method="POST"> <h2>REGISTER AN ACCOUNT</h2>
+    <table>
+      <tr><td id="text-signup">Username</td><td><input name = "username" type="text" value="username"></td><br><br>
+      <tr><td id="text-signup">Password</td><td><input name = "password" type="password" value="password"><br><br>
+      <tr><td id="text-signup">First Name</td><td><input name = "first_name" type="text"> <br><br>
+      <tr><td id="text-signup">Middle Name</td><td><input name = "middle_name" type="text"> <br><br>
+      <tr><td id="text-signup">Last Name</td><td><input name = "last_name" type="text"> <br><br>
+      <tr><td id="text-signup">Email</td><td><input name = "email" type="text"> <br><br>
+      <tr><td id="text-signup">Contact #</td><td><input name = "contact_number" type="text"> <br><br>
+      <tr><td id="text-signup">Birthday</td><td><input name = "birthday" type="date"> <br><br>
+      <input name = "signup-button" type="submit" value="SIGN UP!">
 </table>
-
-</div>
-
+    </form>
 
 
+</section>
 
 </body>
 
+<footer class="footer">
+ <div><a href="#">Copyright@ 2022 Developed by HANGMATA 2022</a>.
+ 
+
+</footer>
 
 </html>
